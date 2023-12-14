@@ -1,0 +1,89 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+
+  
+
+  :root {
+    scroll-behavior: 'smooth';
+   
+   }
+
+
+  a,button,Link{
+    @apply  !cursor-pointer
+  }
+  body{
+    overflow-x: hidden!important;
+  }
+}
+@font-face {
+    font-family: 'BalisongUltra';
+    src: URL('../../public/css/BalisongUltra/BalisongUltra-2O9Re.ttf') format('truetype');
+  }
+
+.slick-slide{
+ @apply p-1
+}
+.p-dialog-title{
+    @apply text-lg md:text-2xl
+}
+.coin-3d-rotate{
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+@keyframes wiggleanim {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+.animated-pop{
+  animation: pop 500ms ease 100ms 1 both running;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+    animation-timing-function: cubic-bezier(0.52, 2.1, 0.43, 1.22);
+  }
+  35% {
+    transform: scale(0.937);
+    animation-timing-function: cubic-bezier(0.37, -0.25, 0.07, 2.15);
+  }
+  77% {
+    transform: scale(0.995);
+    animation-timing-function: cubic-bezier(0.28, -0.03, 0.48, 1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes rotatey {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
