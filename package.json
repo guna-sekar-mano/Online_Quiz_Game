@@ -1,0 +1,40 @@
+{
+  "name": "quizadmin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p 1000",
+    "lint": "next lint",
+    "deploy:local": "next build && pm2 startOrRestart ecosystem.config.js --env local",
+    "deploy:dev": "next build && pm2 startOrRestart ecosystem.config.js --env development",
+    "deploy:prod": "next build && sudo pm2 start npm --name quizappadmin -- run start -- -p 1001"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "@nextui-org/react": "^2.2.9",
+    "@tanstack/react-query": "^5.12.2",
+    "axios": "^1.5.0",
+    "chart.js": "^4.4.0",
+    "framer-motion": "^10.16.5",
+    "html2pdf.js": "^0.10.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.3",
+    "next": "^14.0.4",
+    "preline": "^1.9.0",
+    "primereact": "^9.6.2",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "zustand": "^4.4.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "^13.5.6",
+    "postcss": "latest",
+    "tailwindcss": "latest"
+  }
+}
