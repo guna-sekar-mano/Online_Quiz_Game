@@ -18,7 +18,7 @@ const Layout=({children,bgcolor})=>{
     const [color,setcolor]=useState(null)
     useEffect(() => {
       window.fullScreen = true;
-  
+ 
     }, []);
     useEffect(() => {
       toast.dismiss();
@@ -76,9 +76,10 @@ const Layout=({children,bgcolor})=>{
                 </div>
               </div>
           <Toaster position="top-right" reverseOrder={true}/>
-          
+         
       </ThemeProvider>
       </RootLayout>
+      
     
   
  )

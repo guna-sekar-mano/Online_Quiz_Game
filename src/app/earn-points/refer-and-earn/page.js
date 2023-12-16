@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import { useQuery } from "react-query";
 import { apiinitreferandearn } from "@/services/apiearnpoints/apireferandearn";
 import Fullscreenloading from "@/components/loading/Fullscreenloading";
+import { Spinner } from "@nextui-org/react";
 //import { useRouter } from "next/navigation";
 const ReferandEarncard= dynamic(() => import('../../../components/earn-points/ReferandEarncard'))
 const Layout= dynamic(() => import('../../../components/layout/layout'),{loading:()=><Fullscreenloading/>})
@@ -20,7 +21,7 @@ const ReferandEarn=()=>{
       })
      return result
     }
-    const {data}=useQuery('initreferandearn',handleinitreferandearn,{refetchOnWindowFocus:false})
+    const {data,isLoading}=useQuery('initreferandearn',handleinitreferandearn,{refetchOnWindowFocus:false})
   
     return(
         <Layout>
@@ -28,7 +29,7 @@ const ReferandEarn=()=>{
                 <div className="max-w-lg w-full mx-auto px-6  sm:px-6 lg:px-8">
                   
                     <div className="flex items-center justify-center">
-                        <ReferandEarncard data={data}/>
+                    {isLoading?<Spinner/>:<ReferandEarncard data={data}/>}
                     </div>
                 </div>
     

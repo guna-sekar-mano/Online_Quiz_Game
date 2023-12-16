@@ -13,6 +13,7 @@ import "primereact/resources/themes/tailwind-light/theme.css";
 import "primereact/resources/primereact.min.css"; 
 import { QueryClient, QueryClientProvider } from 'react-query';
 
+
 export default function RootLayout(props) {
   const {children,bgcolor }=props
   const queryClient = new QueryClient();
@@ -20,13 +21,14 @@ export default function RootLayout(props) {
 
     <QueryClientProvider client={queryClient}>
       <html lang="en" className={`bg-gradient-to-r ${bgcolor?bgcolor:'from-yellow-300 to-yellow-400'} cursor-custom select-none`}>
- 
+      
         <body className={`${poppins.variable}`}>
           
             {children}
-    
+            
         </body>
       </html>
+      
     </QueryClientProvider>
     
   )

@@ -1,8 +1,6 @@
 'use client'
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
-import Image from "next/image";
 import dynamic from "next/dynamic";
 import toast from "react-hot-toast";
 import { apiuserlogin } from "@/services/apiaccount/apiaccount";
@@ -44,21 +42,9 @@ const Login=()=>{
   }   
  return(
     <Layout>
-      <section>
-          <div className="max-w-[35rem] w-full mx-auto px-4  sm:px-6 lg:px-8">
-              <div className="grid grid-cols-1">
-                  <div className=" p-4 md:p-10 animate-fade-left">
-                      <div className="mb-5 text-center flex justify-center">
-                        <Image src={`/images/icons/boy.png`}  className="flex-shrink-0  w-[8rem]  text-center" width={200} height={200} alt=""  />
-                      </div>
-                      <Loginform handlechange={handlechange} userlogin={userlogin}/>
-                      <div className="mt-3 text-center">
-                          <Link href={'/account/register'} className="text-xs text-blue-950 hover:text-blue-500">New to SKILL GAMER? Create an account</Link>
-                      </div>
-                  </div>
-              </div>
-          </div>
-     </section>
+
+    <Loginform handlechange={handlechange} userlogin={userlogin}/>
+                      
 
     </Layout>
  )

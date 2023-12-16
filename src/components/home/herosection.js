@@ -12,10 +12,10 @@ const Herosection=(props)=>{
             <div>
               <div className="flex items-center justify-center lg:block">
                 <div className="flex justify-center">
-                <Image src={`/images/icons/key.png`}  className="flex-shrink-0 w-[8rem] lg:w-[15rem]  text-center absolute -top-10 lg:static -left-6" width={200} height={200} alt=""  />
+                <Image src={`/images/icons/key.png`}  className="flex-shrink-0 w-[8rem] lg:w-[15rem]  text-center absolute -top-10 lg:static -left-6" width={150} height={150} alt="" decoding="async"   priority={true}/>
                 </div>
                 <div>
-                  <h3 className="text-xl lg:text-5xl font-semibold drop-shadow-xl [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">PRACTICE</h3>
+                  <h3 className="text-xl lg:text-5xl font-semibold [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">PRACTICE</h3>
                 </div>
               
               </div>
@@ -27,10 +27,10 @@ const Herosection=(props)=>{
             <div>
               <div className="flex items-center justify-center lg:block">
                 <div  className="flex justify-center">
-                  <Image src={`/images/icons/trophy.png`}  className="flex-shrink-0 w-[8rem] lg:w-[15rem] text-center absolute -top-10 lg:static -left-6" width={200} height={200} alt=""  />
+                  <Image src={`/images/icons/trophy.png`}  className="flex-shrink-0 w-[8rem] lg:w-[15rem] text-center absolute -top-10 lg:static -left-6" width={150} height={150} alt="" decoding="async"  priority={true}/>
                 </div>
                 <div>
-                <h3 className="text-lg lg:text-5xl font-semibold [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">START GAME</h3>
+                <h3 className="text-lg lg:text-5xl font-semibold  [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]">START GAME</h3>
                 </div>
               </div>
             

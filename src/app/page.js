@@ -1,6 +1,5 @@
 'use client'
 import { useRouter } from 'next/navigation';
-import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import Fullscreenloading from '@/components/loading/Fullscreenloading';
 const Herosection= dynamic(() => import('../components/home/herosection'));
@@ -25,11 +24,6 @@ export default function Home() {
   }
   return (
     <Layout>
-      <Head>
-        {/* Other meta tags and head elements */}
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-      </Head>
       <Herosection handletutorial={handletutorial} checksession={checksession}/>
     </Layout>
   )

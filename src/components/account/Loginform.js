@@ -1,9 +1,16 @@
 "use client"
 import Image from "next/image";
+import Link from "next/link";
 const Loginform = (props) => {
     const {handlechange,userlogin}=props
   return (
-    <>
+    <section>
+    <div className="max-w-[35rem] w-full mx-auto px-4  sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1">
+            <div className=" p-4 md:p-10 animate-fade-left">
+                <div className="mb-5 text-center flex justify-center">
+                  <Image src={`/images/icons/boy.png`}  className="flex-shrink-0  w-[8rem]  text-center" width={150} height={150}  priority={true} alt=""  />
+                </div>
       <form onSubmit={userlogin}>
         <div className="mb-2">
           <div className="relative">
@@ -20,9 +27,10 @@ const Loginform = (props) => {
               <Image
                 src={`/images/icons/mail.png`}
                 className="flex-shrink-0  w-[2rem]  text-center "
-                width={200}
-                height={200}
+                width={100}
+                height={100}
                 alt=""
+                decoding="async" priority={true}
               />
             </div>
           </div>
@@ -42,9 +50,11 @@ const Loginform = (props) => {
               <Image
                 src={`/images/icons/key.png`}
                 className="flex-shrink-0  w-[2rem]  text-center "
-                width={200}
-                height={200}
+                width={100}
+                height={100}
                 alt=""
+                decoding="async" 
+                priority={true}
               />
             </div>
           </div>
@@ -78,7 +88,13 @@ const Loginform = (props) => {
           </button>
         </div>
       </form>
-    </>
+      <div className="mt-3 text-center">
+                          <Link href={'/account/register'} className="text-xs text-blue-950 hover:text-blue-500">New to SKILL GAMER? Create an account</Link>
+                      </div>
+                  </div>
+              </div>
+          </div>
+     </section>
   );
 };
 export default Loginform;
